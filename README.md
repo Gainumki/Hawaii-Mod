@@ -1,2 +1,2 @@
-# Example-Mod
-An example of a Joker for Balatro.
+# Hawaii pt II
+A Joker for Omega
