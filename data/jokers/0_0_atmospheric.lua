@@ -29,12 +29,12 @@ SMODS.Joker{
 
     calculate = function(self, card, context)
     if context.before then
-        card.ability.extra.three = 0
+        G.atmoScoredFives = 0
     end
 
     if context.cardarea == G.play and context.repetition and not context.repetition_only then
-      if context.other_card:get_id() == 5 and card.ability.extra.three < 3 then
-        card.ability.extra.three = card.ability.extra.three + 1
+      if context.other_card:get_id() == 5 and G.atmoScoredFives < 3 then
+        if not context.blueprint then G.atmoScoredFives = G.atmoScoredFives + 1 end
         return {
           message = 'Again!',
           message_card = context.blueprint_card or card,
